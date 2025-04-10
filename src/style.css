@@ -131,7 +131,8 @@ button {
 .tasks-container {
   background-color: white;
   border-radius: 10px;
-  overflow-x: auto;
+  position: relative;
+
 }
 
 .tasks-container table {
@@ -139,6 +140,17 @@ button {
   border-collapse: collapse;
 }
 
+.tasks-container .headings {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  z-index: 1;
+}
+
+.tasks-container table .tasks {
+  max-height: 300px;
+  overflow-y: auto;
+}
 th,
 td {
   padding: 12px;
@@ -163,7 +175,7 @@ th {
 .sort .upp-arrow {
   height: 10px;
   width: 10px;
-  background-color: none;
+  background-color: transparent;
   outline: none;
   border: none;
 }
@@ -171,7 +183,7 @@ th {
 .sort .down-arrow {
   height: 10px;
   width: 10px;
-  background-color: none;
+  background-color: transparent;
   outline: none;
   border: none;
 }
