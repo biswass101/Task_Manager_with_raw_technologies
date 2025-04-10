@@ -1,22 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task manager</title>
-    <link rel="icon" href="/public/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/public/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- Title -->
     <h2 class="title">Task Manager</h2>
     <main class="main-container">
-        <!-- Task Adding Section -->
-
-        <!-- Actions Section -->
-
-        <!-- Task Display Section -->
+      <!-- Task Adding Section -->
+      <div class="add-task-container">
+        <h3 class="title">Add Task</h3>
+        <div class="input-fields">
+          <div class="left">
+            <input type="text" placeholder="Title" />
+            <input type="date" placeholder="Title" />
+            <select class="priority-select">
+              <option selected disabled>Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="right">
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Description"
+              rows="4"
+            ></textarea>
+            <button>Add Task</button>
+          </div>
+        </div>
+      </div>
+      <!-- Actions Section -->
+      <div class="action-container">
+        <input type="text" placeholder="Search" />
+        <select>
+          <option selected disabled>Filter</option>
+          <optgroup label="Priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </optgroup>
+          <optgroup label="Status">
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+            <option value="all">All</option>
+          </optgroup>
+        </select>
+        <button>Clear All Tasks</button>
+      </div>
+      <!-- Task Display Section -->
+      <div class="tasks-container">
+        <table>
+          <thead class="headings">
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>
+                <div class="due-date">
+                  <p>Due Date</p>
+                  <div class="sort">
+                    <button class="upp-arrow">
+                      <img src="./assets/icons/arrowUp.png" alt="uppArrow" />
+                    </button>
+                    <button class="down-arrow">
+                      <img src="./assets/icons/arrowDown.png" alt="downArrow" />
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="priority">
+                  <p>Priority</p>
+                  <div class="sort">
+                    <button class="upp-arrow">
+                      <img src="./assets/icons/arrowUp.png" alt="uppArrow" />
+                    </button>
+                    <button class="down-arrow">
+                      <img src="./assets/icons/arrowDown.png" alt="downArrow" />
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="tasks">
+            <tr class="task" id="task1">
+              <td>Task 1</td>
+              <td>Description for task 1</td>
+              <td>Apr 11, 2025</td>
+              <td>
+                <div class="status-high">
+                  High
+                </div>
+              </td>
+              <td>Pending</td>
+              <td>
+                <div class="action-buttons">
+                  <button>
+                    <img src="./assets/icons/Done.png" alt="marks-as-done">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/edit.png" alt="edit">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/delete.png" alt="delete">
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="task" id="task1">
+              <td>Task 2</td>
+              <td>Description for task 2</td>
+              <td>Apr 11, 2025</td>
+              <td>
+                <div class="status-medium">
+                  Medium
+                </div>
+              </td>
+              <td>Pending</td>
+              <td>
+                <div class="action-buttons">
+                  <button>
+                    <img src="./assets/icons/Done.png" alt="marks-as-done">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/edit.png" alt="edit">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/delete.png" alt="delete">
+                  </button>
+              </td>
+            </tr>
+            <tr class="task" id="task1">
+              <td>Task 3</td>
+              <td>Description for task 3</td>
+              <td>Apr 11, 2025</td>
+              <td>
+                <div class="status-low">
+                  Low
+                </div>
+              </td>
+              <td>Pending</td>
+              <td>
+                <div class="action-buttons">
+                  <button>
+                    <img src="./assets/icons/Done.png" alt="marks-as-done">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/edit.png" alt="edit">
+                  </button>
+                  <button>
+                    <img src="./assets/icons/delete.png" alt="delete">
+                  </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
-</body>
+  </body>
 </html>

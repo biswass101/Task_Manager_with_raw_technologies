@@ -8,19 +8,193 @@
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
 /* title */
 .title {
-    text-align: center;
-    margin-top: 0.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
+/* main container */
 .main-container {
-    max-width: 800px;
-    height: 10px;
-    margin: 5px auto;
-    background-color: #e8e7e7;
-    border-radius: 10px;
+  max-width: 850px;
+  margin: 5px auto;
+  background-color: #e8e7e7;
+  border-radius: 10px;
+  padding: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* add task section */
+.add-task-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.add-task-container .title {
+  align-self: self-start;
+  margin: 5px 0;
+}
+
+.input-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-fields .left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+.input-fields .left input,
+.priority-select {
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+  background-color: #fff;
+}
+
+.input-fields .right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-fields .right button {
+  align-self: self-end;
+}
+
+.input-fields .right textarea {
+  resize: none;
+  padding: 10px;
+  height: 75px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.input-fields .right button {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(148, 148, 244);
+  cursor: pointer;
+}
+
+/* actions section */
+.action-container {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.action-container > input,
+select,
+button {
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+.action-container > input {
+  flex: 2;
+}
+
+.action-container > select,
+button {
+  flex: 1;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Task Display Section */
+.tasks-container {
+  background-color: white;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.tasks-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.due-date, .priority {
+  display: flex;
+  gap: 5px;
+}
+
+.sort {
+  display: flex;
+  gap: 5px;
+}
+
+.sort .upp-arrow {
+  height: 10px;
+  width: 10px;
+  background-color: none;
+  outline: none;
+  border: none;
+}
+
+.sort .down-arrow {
+  height: 10px;
+  width: 10px;
+  background-color: none;
+  outline: none;
+  border: none;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.status-high, .status-medium, .status-low{
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+.status-high {
+  background-color: rgb(239, 49, 49);
+}
+
+.status-medium {
+   background-color: rgb(244, 218, 16);
+}
+
+.status-low {
+ background-color: rgb(45, 233, 45);
 }
