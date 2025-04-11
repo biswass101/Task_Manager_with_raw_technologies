@@ -132,7 +132,8 @@ button {
   background-color: white;
   border-radius: 10px;
   position: relative;
-
+  height: 50vh;
+  overflow-y: scroll;
 }
 
 .tasks-container table {

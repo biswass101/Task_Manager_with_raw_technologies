@@ -6,7 +6,7 @@
     <title>Task manager</title>
     <link rel="icon" href="/public/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./testScript.js" defer></script>
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
         <form class="input-fields">
           <div class="left">
             <input class="titleIpt" type="text" placeholder="Title" required/>
-            <input class="dDateIpt" type="date" placeholder="Due Date (11/04/2025)" required/>
+            <input class="dDateIpt" type="date" required/>
             <select class="priority-select" required>
               <option selected disabled>Priority</option>
               <option value="high">High</option>
@@ -34,7 +34,6 @@
               id="descriptionIpt"
               placeholder="Description"
               rows="4"
-              value="hdsfsdflksd"
             ></textarea>
             <button class="btn-add-task">Add Task</button>
           </div>
