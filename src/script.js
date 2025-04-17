@@ -37,7 +37,9 @@ function renderTasks(filteredTasks = tasks) {
       <td>${task.description}</td>
       <td>${task.dueDate}</td>
       <td><div class="status-${task.priority.toLowerCase()}">${task.priority}</div></td>
-      <td>${task.status}</td>
+      <td>
+        <div class= ${task.status === 'Completed' ? 'status-bg' : 'status-bg-pending'}>${task.status}</div>
+      </td>
       <td>
         <div class="action-buttons">
           <button class="mark-done">
