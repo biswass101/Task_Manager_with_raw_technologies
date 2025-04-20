@@ -98,7 +98,7 @@ addTaskButton.addEventListener("click", (event) => {
       addTaskButton.innerText = "Add Task";
     }
   } else { // task adding mode
-    tasks.push({
+    tasks.unshift({
       id: Date.now(),
       title,
       description,
